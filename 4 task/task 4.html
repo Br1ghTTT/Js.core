@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+<script>
+
+
+//*******************************************1 task***************************************
+function testThrow(exception){
+    try{
+        throw exception;
+    }catch(error){
+        console.log("Caught: " + error);
+    }
+}
+testThrow(5);
+testThrow('Test');
+testThrow(new Error('An error happened'));
+
+
+
+
+//*******************************************2 task***************************************
+function calcRectangleArea(a, b){
+    let S = a * b;
+        if( a > 0 && b > 0){
+            return S;
+        }
+        throw new Error("Неможливо обрахувати площу! ");
+    }try{
+        let result = calcRectangleArea(10, "Hey");
+        console.log(result);
+    }catch (exception){
+        console.log(exception.name);
+        console.log(exception.message);
+        console.log(exception.stack);
+    }
+
+
+
+//*******************************************3 task***************************************
+function checkAge()
+{
+    let age = prompt( "Input ur age: ");
+    let a = "";
+    if(age >= 14){
+        console.log("Okay u may go to watch this film! ");
+        return age;
+    }else if(age < 14){
+        throw new Error(" Error! U too yang! ");
+    }else {
+        throw new Error(" Don't input String value! Only numbers!")
+    }
+    }try{
+        let check = checkAge();
+        console.log(check);
+    }catch(exception){
+        console.log(exception.name);
+        console.log(exception.message);
+        console.log(exception.stack);
+    }
+
+
+
+
+
+
+//*******************************************4 task***************************************
+class MonthException{
+    constructor(MonthException){
+        this.message = MonthException;
+    }
+}
+let error = new MonthException("Incorrect month data!");
+function showMonthName(month){
+    const months = new Date('January, 2020');
+    if(month <= 12){
+         months.setMonth(month) + 1;
+         console.log(months);
+    }else{
+        throw new MonthException("Incorrect month data!");
+    }
+}       try{
+            let result = showMonthName(22);
+            console.log(result);
+        }catch(MonthException){
+            console.log(MonthException.message);
+        }
+showMonthName(22);
+
+
+
+
+
+
+//*******************************************5 task***************************************
+function showUser(id){
+    id = new Array(2, -12, 44, 22);
+    for(let i = 0; i < id.length; i+= 1){
+        if(id[i] < 0)
+        {
+            throw new Error("Error, ids musn't be negative: " + id[i]);   
+       
+        }
+        else
+        id[i] = {'id': id[i]};
+    }
+    return id;
+}
+function showUsers(ids){
+    ids = new Array (2, -12, 44, 22);
+    for(let i = 0; i < ids.length; i+= 1)
+    {
+
+        if(ids[i] < 0)
+        {
+            
+            
+            console.log("Error, id mustn't be negative! But right now it's: " + ids[i]);    
+            delete ids[i]; 
+        }else
+        ids[i] = {'id': ids[i]};
+        
+        }
+
+        return ids;
+    }    
+    console.log(showUsers());
+try{
+console.log(showUser());
+}catch(exception){
+
+    console.log(exception.stack);
+}
+
+</script>
+</body>
+</html>
