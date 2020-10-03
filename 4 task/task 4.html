@@ -47,13 +47,15 @@ function checkAge()
 {
     let age = prompt( "Input ur age: ");
     let a = "";
-    if(age >= 14){
-        console.log("Okay u may go to watch this film! ");
+    if(age.trim() == ""){
+        throw new Error("The field is empty! Try again!");
         return age;
     }else if(age < 14){
-        throw new Error(" Error! U too yang! ");
-    }else {
-        throw new Error(" Don't input String value! Only numbers!")
+        throw new Error("Error! U too yang! ");
+    }else if(isNaN(parseInt(age))){
+        throw new Error("Please enter the number")
+    }else{
+        console.log("Enjoy the movei!");
     }
     }try{
         let check = checkAge();
