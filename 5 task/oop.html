@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*//-------------------------------Task 1--------------------------------
+    function propsCount(mentor){
+
+            let count = 0;
+            for(let i in mentor){
+            count += 1;
+            }
+        return count;
+    }
+    console.log(propsCount({ course: "JS fundamental", duration: 3, direction: "web-development" }));
+
+
+
+//-------------------------------Task 2--------------------------------
+    function showProps(car){
+        console.log(Object.getOwnPropertyNames(car));
+        for(let i in car){      //${value}`));
+        console.log(i + ": " + car[i]);
+        }
+    }
+    console.log(showProps({ brand: "Volvo", name: "V40", year: 2014, engine: "2.0", type: " Cross Country" }));*/
+
+
+
+//-------------------------------Task 3--------------------------------    
+  /*  class Person{
+        constructor(surname, name){
+            this.surname = surname;
+            this.name = name;
+        }
+        showFullName(){
+            return this.surname + this.name;
+        }
+    }
+    class Student extends Person{
+        constructor(surname, name, year,Currentyear  ){
+            super(surname, name);
+            this.year = year;
+            this.Currentyear = Currentyear;
+        }
+        showFullName1(middleName){
+            this.middleName = middleName;
+            return this.showFullName() + this.middleName;
+        }
+        showCourse(course){
+            return course = this.Currentyear - this.year;
+        }
+    }
+    let stud = new Student("Horbachov ", "Yurii ", 2015, 2020);
+    console.log(stud.showFullName1("Vitaliyovych"));
+    console.log("Current course is: " + stud.showCourse()); 
+ */
+ 
+//-------------------------------Task 4--------------------------------    
+/*
+    class Worker{
+        #experience = 1.2;
+        constructor(fullName, dayRate, workingDays){
+            this.fullName = fullName;
+            this.dayRate = dayRate;
+            this.workingDays = workingDays;
+        }
+        showSalary(salary){
+        salary = this.dayRate * this.workingDays
+        return salary;
+        }
+        showExp(){
+           return this.#experience;
+        }
+        showSalaryWithExperience(salary2){
+            salary2 = this.showSalary() * this.#experience;
+            return salary2;
+        }
+        get experience() {
+            return this.#experience;
+        }
+        set experience(value){
+            this.#experience = value; 
+        }
+        showSalaryWithNewExp(){
+            return this.showExp() * this.showSalary();
+        }
+    } 
+
+    let worker1 = new Worker("John Johnson", 20, 23);
+    console.log(worker1.fullName);               
+    console.log(worker1.showSalary());
+    console.log("New experience: " + worker1.showExp());
+    console.log(worker1.showSalaryWithExperience());
+    worker1.experience = 1.5;
+    console.log("New experience: " + worker1.showExp());
+    console.log(worker1.showSalaryWithNewExp());
+
+
+console.log("*****************************************");
+
+
+class Worker2{
+        #experience = 1.2;
+        constructor(fullName, dayRate, workingDays){
+            this.fullName = fullName;
+            this.dayRate = dayRate;
+            this.workingDays = workingDays;
+        }
+        showSalary(salary){
+        salary = this.dayRate * this.workingDays
+        return salary;
+        }
+        showExp(){
+           return this.#experience;
+        }
+        showSalaryWithExperience(salary2){
+            salary2 = this.showSalary() * this.#experience;
+            return salary2;
+        }
+        get experience() {
+            return this.#experience;
+        }
+        set experience(value){
+            this.#experience = value; 
+        }
+        showSalaryWithNewExp(){
+            return this.showExp() * this.showSalary();
+        }
+    } 
+
+    let worker2 = new Worker2("Tom Tomson", 48, 22);
+    console.log(worker2.fullName);               
+    console.log(worker2.showSalary());
+    console.log("New experience: " + worker2.showExp());
+    console.log(worker2.showSalaryWithExperience());
+    worker2.experience = 1.5;
+    console.log("New experience: " + worker2.showExp());
+    console.log(worker2.showSalaryWithNewExp());
+
+
+    console.log("*****************************************");
+
+
+    class Worker3{
+        #experience = 1.2;
+        constructor(fullName, dayRate, workingDays){
+            this.fullName = fullName;
+            this.dayRate = dayRate;
+            this.workingDays = workingDays;
+        }
+        showSalary(salary){
+        salary = this.dayRate * this.workingDays
+        return salary;
+        }
+        showExp(){
+           return this.#experience;
+        }
+        showSalaryWithExperience(salary2){
+            salary2 = this.showSalary() * this.#experience;
+            return salary2;
+        }
+        get experience() {
+            return this.#experience;
+        }
+        set experience(value){
+            this.#experience = value; 
+        }
+        showSalaryWithNewExp(){
+            return this.showExp() * this.showSalary();
+        }
+    } 
+
+    let worker3 = new Worker("Andy Ander", 29, 23);
+    console.log(worker3.fullName);               
+    console.log(worker3.showSalary());
+    console.log("New experience: " + worker3.showExp());
+    console.log(worker3.showSalaryWithExperience());
+    worker3.experience = 1.5;
+    console.log("New experience: " + worker3.showExp());
+    console.log(worker3.showSalaryWithNewExp());
+
+
+    let Salary = [
+        {name: 'Andry Ander', salary: worker3.showSalaryWithNewExp()},
+        {name: 'John Johnson', salary: worker1.showSalaryWithNewExp()},
+        {name: 'Tom Tomson', salary: worker2.showSalaryWithNewExp()}    
+        ];
+
+    Salary.sort(function(a, b){
+        return a.salary - b.salary;
+    });
+    console.log("********** Sorted salary: **********")
+    for(let i in Salary){
+        console.log( Salary[i]. name + ": " + Salary[i]. salary);
+    }
+
+*/
+//-------------------------------Task 5--------------------------------    
+
+class GeometricFigure{
+    
+    getArea(){
+        return 0;
+    }
+    toString(){
+        return Object.getPrototypeOf(this).constructor.name;
+    }
+}
+class Triangle extends GeometricFigure{
+    constructor (side, height){
+        super (side, height);
+        this.side = side;
+        this.height = height;
+    }
+    getArea(area){
+        return this.area = (this.side * this.height) / 2;
+    }
+}
+class Square extends GeometricFigure{
+    constructor(a){
+        super(a);
+        this.a = a;
+    }
+    getArea(area1){
+        return this.area1 = this.a ** 2;
+    }
+}
+class Circle extends GeometricFigure{
+    constructor(radius){
+        super(radius);
+        this.radius = radius;
+    }
+    getArea(area2){
+        return this.area2 = Math.PI * (this.radius ** 2);
+    }
+}
+let triangle = new Triangle(4, 5);
+let square = new Square(7);
+let circle = new Circle(5);
+
+function handleFigures(figures){
+    console.log("Перевірка чи трикутник належать батьківському класу з урахуванням наслідування:")
+    console.log(triangle instanceof GeometricFigure);
+    console.log("Перевірка чи квадрат належать батьківському класу з урахуванням наслідування:")
+    console.log(square instanceof GeometricFigure);
+    console.log("Перевірка чи коло належать батьківському класу з урахуванням наслідування:")
+    console.log(circle instanceof GeometricFigure);
+
+    console.log("******************Area of figures*********************");
+    console.log(" Geometric figure: Triangle - area: " + triangle.getArea());
+    console.log(" Geometric figure: Triangle - area: " + square.getArea());
+    console.log(" Geometric figure: Triangle - area: " + circle.getArea());
+
+
+    let sum = triangle.getArea() + square.getArea() + circle.getArea();
+    console.log("Total area: " + sum);
+}
+
+handleFigures(figures = [triangle, square, circle]);
+
+
+    </script>
+</body>
+</html>
