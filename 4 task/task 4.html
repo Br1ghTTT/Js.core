@@ -100,44 +100,27 @@ showMonthName(22);
 
 
 //*******************************************5 task***************************************
-function showUser(id){
-    id = new Array(2, -12, 44, 22);
-    for(let i = 0; i < id.length; i+= 1){
-        if(id[i] < 0)
+    function showUser(id){
+        if(id < 0)
         {
-            throw new Error("Error, ids musn't be negative: " + id[i]);   
+            throw new Error("Error, id musn't be negative: " + id);   
        
         }
-        else
-        id[i] = {'id': id[i]};
-    }
     return id;
-}
-function showUsers(ids){
-    ids = new Array (2, -12, 44, 22);
-    for(let i = 0; i < ids.length; i+= 1)
-    {
-
-        if(ids[i] < 0)
-        {
-            
-            
-            console.log("Error, id mustn't be negative! But right now it's: " + ids[i]);    
-            delete ids[i]; 
-        }else
-        ids[i] = {'id': ids[i]};
-        
+    }
+    function showUsers(ids){
+    let result = [];
+    ids.forEach(function(id){
+        try{
+            let info = showUser(id);
+            result.push(info);
+        }catch(exception){
+            console.log(exception.message);
         }
-
-        return ids;
+    });
+        console.log(result);
     }    
-    console.log(showUsers());
-try{
-console.log(showUser());
-}catch(exception){
-
-    console.log(exception.stack);
-}
+    showUsers([7, 12, -44, -22]);
 
 </script>
 </body>
