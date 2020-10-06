@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--     ********************************* 1 task *********************************-->
+  <div id = "test"> First </div>
+    <div id = "test"> First </div>  
+    <script>
+    document.getElementById("test").innerHTML = "Last";
+    let element = document.body.children[1]; 
+    element.innerHTML = "Last";
+</script>
+ 
+
+    <!--********************************* 2 task *********************************-->
+ <img id="image" src="dog.jpg">
+<p></p>
+<button onclick="document.getElementById('image').src='cat.jpg'"> Change the photo</button>
+<button onclick="document.getElementById('image').src='dog.jpg'"> Change the photo again</button>  
+
+        <!--********************************* 3 task *********************************-->
+     <h2>Article header</h2>      
+  <div id="text">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+  </div>
+    <p>Another text</p> 
+     <script>
+    let elems = document.querySelectorAll("p:nth-of-type(1)");
+    let elems2 = document.querySelectorAll("p:nth-of-type(2)");
+    let elems3 = document.querySelectorAll("p:nth-of-type(3)");
+    for (let elem of elems) {
+        elem.innerHTML = 'Selector text 0: First paragraph';
+        break;
+    }
+    for (let elem1 of elems2) {
+        elem1.innerHTML = 'Selector text 1: Second paragraph';
+    }
+    for (let elem2 of elems3) {
+        elem2.innerHTML = 'Selector text 2: Third paragraph';
+        break;
+    }
+</script>  -
+        <!--********************************* 4 task *********************************-->
+
+         <ul id = "list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+           </ul>
+    <script>
+      let elems = document.querySelectorAll("li:nth-of-type(1)");
+        let elems2 = document.querySelectorAll("li:nth-of-type(2)");
+        let elems3 = document.querySelectorAll("li:nth-of-type(3)");
+        let elems4 = document.querySelectorAll("li:nth-of-type(4)");
+        let elems5 = document.querySelectorAll("li:nth-of-type(5)");
+    for (let elem of elems) {
+        elem.innerHTML = '1';
+        break;
+    }
+    for (let elem of elems2) {
+        elem.innerHTML = '5';
+    }
+    for (let elem of elems3) {
+        elem.innerHTML = '2';
+    }  
+    for (let elem of elems4) {
+        elem.innerHTML = '3';
+    }
+    for (let elem of elems5) {
+        elem.innerHTML = '4';
+    }  
+    document.getElementById("list");
+    let element = document.body.children[0]; 
+    element.innerHTML = "1, 5, 2, 3, 4";
+   </script> 
+        <!--********************************* 5 task *********************************-->
+         <h1>I'am a big header!!!</h1>
+        <div id="myDiv">
+            <p id = "1">First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+            <p>Fourth paragraph</p>
+        </div>
+        <ul id="myList">
+            <li>Make</li>
+            <li>me</li>
+            <li>horizontal!</li>
+        </ul>
+        <span>Make me invisible, please!</span>
+
+        <script>
+        let heder = document.getElementsByTagName("h1");
+        for(let i = 0; i < heder.length; i++){
+            heder[i].style.backgroundColor = "lightgreen";
+        }
+        let first = document.querySelectorAll("p:nth-of-type(1)");
+        for (let elem of first) {
+        elem.style.fontWeight = "bold";
+        }
+        let second = document.querySelectorAll("p:nth-of-type(2)");
+        for(let i = 0; i < second.length; i++){
+            second[i].style.color = "red";
+        }
+        let third = document.querySelectorAll("p:nth-of-type(3)");
+        for(let i = 0; i < third.length; i++){
+            third[i].style.textDecoration = "Underline"
+
+        }
+        let four = document.querySelectorAll("p:nth-of-type(4)");
+        for(let i = 0; i < four.length; i++){
+            four[i].style.fontStyle = "italic";
+        }
+        let five = document.getElementById("myList");
+        five.innerHTML = "Make me horizontal!";
+
+        let six = document.getElementsByTagName("span");
+        for(let i = 0; i < six.length; i++){
+            six[i].style.visibility = "hidden";
+
+        }
+        </script> 
+
+
+
+
+        
+</body>
+</html>
