@@ -47,7 +47,7 @@
             this.year = year;
             this.Currentyear = Currentyear;
         }
-        showFullName1(middleName){
+        showFullName(middleName){
             this.middleName = middleName;
             return this.showFullName() + this.middleName;
         }
@@ -56,7 +56,7 @@
         }
     }
     let stud = new Student("Horbachov ", "Yurii ", 2015, 2020);
-    console.log(stud.showFullName1("Vitaliyovych"));
+    console.log(stud.showFullName("Vitaliyovych"));
     console.log("Current course is: " + stud.showCourse()); 
  
  
