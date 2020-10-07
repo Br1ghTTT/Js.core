@@ -213,7 +213,7 @@ class GeometricFigure{
 }
 class Triangle extends GeometricFigure{
     constructor (side, height){
-        super (side, height);
+        super();
         this.side = side;
         this.height = height;
     }
@@ -223,45 +223,40 @@ class Triangle extends GeometricFigure{
 }
 class Square extends GeometricFigure{
     constructor(a){
-        super(a);
+        super();
         this.a = a;
     }
-    getArea(area1){
-        return this.area1 = this.a ** 2;
+    getArea(area){
+        return this.area = this.a ** 2;
     }
 }
 class Circle extends GeometricFigure{
     constructor(radius){
-        super(radius);
+        super();
         this.radius = radius;
     }
-    getArea(area2){
-        return this.area2 = Math.PI * (this.radius ** 2);
+    getArea(area){
+        return this.area = Math.PI * (this.radius ** 2);
     }
 }
-let triangle = new Triangle(4, 5);
-let square = new Square(7);
-let circle = new Circle(5);
+
 
 function handleFigures(figures){
-    console.log("Перевірка чи трикутник належать батьківському класу з урахуванням наслідування:")
-    console.log(triangle instanceof GeometricFigure);
-    console.log("Перевірка чи квадрат належать батьківському класу з урахуванням наслідування:")
-    console.log(square instanceof GeometricFigure);
-    console.log("Перевірка чи коло належать батьківському класу з урахуванням наслідування:")
-    console.log(circle instanceof GeometricFigure);
-
-    console.log("******************Area of figures*********************");
-    console.log(" Geometric figure: Triangle - area: " + triangle.getArea());
-    console.log(" Geometric figure: Triangle - area: " + square.getArea());
-    console.log(" Geometric figure: Triangle - area: " + circle.getArea());
+    return figures.reduce( function (sum , figure){
+        if(figure instanceof GeometricFigure){
+            console.log("Geometric Figures" + figure.toString() + " - area: " + figure.getArea());
+            return sum += figure.getArea()
+            
+        }
+        else
+        throw new Error("Smth wrong!");
+    }, 0);
 
 
-    let sum = triangle.getArea() + square.getArea() + circle.getArea();
-    console.log("Total area: " + sum);
+
 }
-
-handleFigures(figures = [triangle, square, circle]);
+const figures = [ new Triangle(4,5), new Square(7), new Circle(5) ];
+console.log(handleFigures(figures));
 
 
     </script>
