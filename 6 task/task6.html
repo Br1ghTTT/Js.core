@@ -126,8 +126,39 @@
             six[i].style.visibility = "hidden";
 
         }
+            
+        </script> 
+        <input type="text" id="input1" value="">
+        <input type="text" id="input2" value="">
+        <button type="button" id = "but"> Swap me! </button>
+        <script>
+            let input1 = prompt("Введіть 1 повідомлення");
+            let input2 = prompt("Введіть 2 повідомлення");
+            document.getElementById("input1").value = input1;
+            document.getElementById("input2").value = input2;
+            function swap(){
+                document.getElementById("input1").value = input2;
+                document.getElementById("input2").value = input1;
+                
+            }
+            document.getElementById('but').addEventListener('click', swap);
         </script> 
 
+        <script>
+        
+            let newMain = document.createElement("main");
+            newMain.className = "MainClass check item";
+            document.body.prepend(newMain);
+            
+            let newDiv = document.createElement("div");
+            newDiv.id = "myDiv";
+            newMain.append(newDiv);
+     
+    
+            let newParagraph = document.createElement("p");
+            newParagraph.innerHTML = "First paragraph";
+            myDiv.prepend(newParagraph);
+        </script>
 
 
 
