@@ -7,23 +7,28 @@
 </head>
 <body>
 <!--     ********************************* 1 task *********************************-->
-  <div id = "test"> First </div>
+   <div id = "test"> First </div>
     <div id = "test"> First </div>  
     <script>
     document.getElementById("test").innerHTML = "Last";
     let element = document.body.children[1]; 
     element.innerHTML = "Last";
-</script>
+</script> 
  
 
+
+
     <!--********************************* 2 task *********************************-->
- <img id="image" src="dog.jpg">
+  <img id="image" src="dog.jpg">
 <p></p>
 <button onclick="document.getElementById('image').src='cat.jpg'"> Change the photo</button>
-<button onclick="document.getElementById('image').src='dog.jpg'"> Change the photo again</button>  
+<button onclick="document.getElementById('image').src='dog.jpg'"> Change the photo again</button>   
+
+
+
 
         <!--********************************* 3 task *********************************-->
-     <h2>Article header</h2>      
+    <h2>Article header</h2>      
   <div id="text">
     <p>First paragraph</p>
     <p>Second paragraph</p>
@@ -31,8 +36,7 @@
   </div>
     <p>Another text</p> 
      <script>
-     <script>
-         
+
     let elems = document.querySelectorAll("p:nth-of-type(1)");
     elems[0].innerHTML = 'Selector text 0: First paragraph';
 
@@ -41,27 +45,27 @@
 
     let elems3 = document.querySelectorAll("p:nth-of-type(3)");
     elems3[0].innerHTML = 'Selector text 2: Third paragraph';
+
+
+//********************************************* Або ще такий варіант ***************************************************
+
+
+    let elemss = document.querySelectorAll("p");
+    elemss[0].innerHTML = 'Selector text 0: First paragraph';
+
+    let elemss2 = document.querySelectorAll("p");
+    elemss2[1].innerHTML = 'Selector text 1: Second paragraph';
+
+    let elemss3 = document.querySelectorAll("p");
+    elemss3[2].innerHTML = 'Selector text 2: Third paragraph';
       
-         
-         
-         //********************************************* Або ще такий варіант ***************************************************
-    let elems = document.querySelectorAll("p");
-    elems[0].innerHTML = 'Selector text 0: First paragraph';
+</script>  
 
-    let elems2 = document.querySelectorAll("p");
-    elems2[1].innerHTML = 'Selector text 1: Second paragraph';
 
-    let elems3 = document.querySelectorAll("p");
-    elems3[2].innerHTML = 'Selector text 2: Third paragraph';
-         
-         
-         
-         
-</script> 
-</script>  -
+
         <!--********************************* 4 task *********************************-->
 
-         <ul id = "list">
+          <ul id = "list">
             <li>1</li>
             <li>2</li>
             <li>3</li>
@@ -75,9 +79,13 @@
         let element = document.getElementById("list");
         element = document.body.children[0]; 
         element.innerHTML = "1, 5, 2, 3, 4";
-   </script> 
+   </script>   
+
+
+
+
         <!--********************************* 5 task *********************************-->
-         <h1>I'am a big header!!!</h1>
+           <h1>I'am a big header!!!</h1>
         <div id="myDiv">
             <p id = "1">First paragraph</p>
             <p>Second paragraph</p>
@@ -112,9 +120,14 @@
 
         let six = document.getElementsByTagName("span");
         six[0].style.visibility = "hidden";
- 
-        </script> 
- <!--********************************* 6 task *********************************-->
+   
+        </script>  
+
+
+
+
+    
+        <!--********************************* 6 task *********************************-->
         <input type="text" id="input1" value="">
         <input type="text" id="input2" value="">
         <button type="button" id = "but"> Swap me! </button>
@@ -130,10 +143,12 @@
             }
             document.getElementById('but').addEventListener('click', swap);
         </script> 
-    
-    
-<!--********************************* 7 task *********************************-->
-        <script>
+
+
+
+
+        <!--********************************* 7 task *********************************-->
+         <script>
         
             let newMain = document.createElement("main");
             newMain.className = "MainClass check item";
@@ -147,10 +162,8 @@
             let newParagraph = document.createElement("p");
             newParagraph.innerHTML = "First paragraph";
             myDiv.prepend(newParagraph);
-        </script>
-
-
-
+        </script> 
+ 
         
 </body>
 </html>
