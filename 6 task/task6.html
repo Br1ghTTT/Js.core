@@ -56,30 +56,12 @@
             <li>5</li>
            </ul>
     <script>
-      let elems = document.querySelectorAll("li:nth-of-type(1)");
-        let elems2 = document.querySelectorAll("li:nth-of-type(2)");
-        let elems3 = document.querySelectorAll("li:nth-of-type(3)");
-        let elems4 = document.querySelectorAll("li:nth-of-type(4)");
-        let elems5 = document.querySelectorAll("li:nth-of-type(5)");
-    for (let elem of elems) {
-        elem.innerHTML = '1';
-        break;
-    }
-    for (let elem of elems2) {
-        elem.innerHTML = '5';
-    }
-    for (let elem of elems3) {
-        elem.innerHTML = '2';
-    }  
-    for (let elem of elems4) {
-        elem.innerHTML = '3';
-    }
-    for (let elem of elems5) {
-        elem.innerHTML = '4';
-    }  
-    document.getElementById("list");
-    let element = document.body.children[0]; 
-    element.innerHTML = "1, 5, 2, 3, 4";
+        let elems = document.getElementsByTagName("UL");
+        elems[0].innerHTML = "1, 5, 2, 3, 4";
+
+        let element = document.getElementById("list");
+        element = document.body.children[0]; 
+        element.innerHTML = "1, 5, 2, 3, 4";
    </script> 
         <!--********************************* 5 task *********************************-->
          <h1>I'am a big header!!!</h1>
