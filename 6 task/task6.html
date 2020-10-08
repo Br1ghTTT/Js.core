@@ -98,35 +98,26 @@
 
         <script>
         let heder = document.getElementsByTagName("h1");
-        for(let i = 0; i < heder.length; i++){
-            heder[i].style.backgroundColor = "lightgreen";
-        }
+            heder[0].style.backgroundColor = "lightgreen";
+        
         let first = document.querySelectorAll("p:nth-of-type(1)");
-        for (let elem of first) {
-        elem.style.fontWeight = "bold";
-        }
-        let second = document.querySelectorAll("p:nth-of-type(2)");
-        for(let i = 0; i < second.length; i++){
-            second[i].style.color = "red";
-        }
-        let third = document.querySelectorAll("p:nth-of-type(3)");
-        for(let i = 0; i < third.length; i++){
-            third[i].style.textDecoration = "Underline"
+            first[0].style.fontWeight = "bold";
 
-        }
+        let second = document.querySelectorAll("p:nth-of-type(2)");
+            second[0].style.color = "red";
+        
+        let third = document.querySelectorAll("p:nth-of-type(3)");
+            third[0].style.textDecoration = "Underline"
+
         let four = document.querySelectorAll("p:nth-of-type(4)");
-        for(let i = 0; i < four.length; i++){
-            four[i].style.fontStyle = "italic";
-        }
+            four[0].style.fontStyle = "italic";
+    
         let five = document.getElementById("myList");
         five.innerHTML = "Make me horizontal!";
 
         let six = document.getElementsByTagName("span");
-        for(let i = 0; i < six.length; i++){
-            six[i].style.visibility = "hidden";
-
-        }
-            
+        six[0].style.visibility = "hidden";
+   
         </script> 
         <input type="text" id="input1" value="">
         <input type="text" id="input2" value="">
