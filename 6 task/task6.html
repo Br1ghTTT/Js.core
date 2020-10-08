@@ -31,20 +31,33 @@
   </div>
     <p>Another text</p> 
      <script>
+     <script>
+         
     let elems = document.querySelectorAll("p:nth-of-type(1)");
+    elems[0].innerHTML = 'Selector text 0: First paragraph';
+
     let elems2 = document.querySelectorAll("p:nth-of-type(2)");
+    elems2[0].innerHTML = 'Selector text 1: Second paragraph';
+
     let elems3 = document.querySelectorAll("p:nth-of-type(3)");
-    for (let elem of elems) {
-        elem.innerHTML = 'Selector text 0: First paragraph';
-        break;
-    }
-    for (let elem1 of elems2) {
-        elem1.innerHTML = 'Selector text 1: Second paragraph';
-    }
-    for (let elem2 of elems3) {
-        elem2.innerHTML = 'Selector text 2: Third paragraph';
-        break;
-    }
+    elems3[0].innerHTML = 'Selector text 2: Third paragraph';
+      
+         
+         
+         //********************************************* Або ще такий варіант ***************************************************
+    let elems = document.querySelectorAll("p");
+    elems[0].innerHTML = 'Selector text 0: First paragraph';
+
+    let elems2 = document.querySelectorAll("p");
+    elems2[1].innerHTML = 'Selector text 1: Second paragraph';
+
+    let elems3 = document.querySelectorAll("p");
+    elems3[2].innerHTML = 'Selector text 2: Third paragraph';
+         
+         
+         
+         
+</script> 
 </script>  -
         <!--********************************* 4 task *********************************-->
 
@@ -99,8 +112,9 @@
 
         let six = document.getElementsByTagName("span");
         six[0].style.visibility = "hidden";
-   
+ 
         </script> 
+ <!--********************************* 6 task *********************************-->
         <input type="text" id="input1" value="">
         <input type="text" id="input2" value="">
         <button type="button" id = "but"> Swap me! </button>
@@ -116,7 +130,9 @@
             }
             document.getElementById('but').addEventListener('click', swap);
         </script> 
-
+    
+    
+<!--********************************* 7 task *********************************-->
         <script>
         
             let newMain = document.createElement("main");
