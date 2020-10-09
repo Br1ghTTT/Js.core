@@ -66,19 +66,34 @@
         <!--********************************* 4 task *********************************-->
 
           <ul id = "list">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-           </ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+            </ul>
     <script>
-        let elems = document.getElementsByTagName("UL");
-        elems[0].innerHTML = "1, 5, 2, 3, 4";
 
-        let element = document.getElementById("list");
-        element = document.body.children[0]; 
-        element.innerHTML = "1, 5, 2, 3, 4";
+        var elems =  document.getElementById("list");
+        var elem = elems.children[0].innerHTML;
+        var elem1 = elems.children[4].innerHTML;
+        var elem2 = elems.children[1].innerHTML;
+        var elem3 = elems.children[3].innerHTML;
+        var elem4 = elems.children[2].innerHTML;
+
+
+
+      /*   var elem =  document.getElementById("list").firstChild.innerHTML;
+        var elem1 = document.getElementById("list").lastChild.innerHTML;
+        var elem2 = document.getElementById("list").firstChild.nextSibling.innerHTML;
+        var elem3 = document.getElementById("list").lastChild.previousSibling.innerHTML;
+        var elem4 = document.getElementById("list").firstChild.nextSibling.nextSibling.innerHTML; */
+
+        alert(elem);
+        alert(elem1);
+        alert(elem2);
+        alert(elem3);
+        alert(elem4);
    </script>   
 
 
