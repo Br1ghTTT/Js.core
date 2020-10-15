@@ -147,43 +147,36 @@
 <select name="cities" id="cities"></select>
 <p id = "1"></p>
 
-<script>
+ <script>
+
+    const cityArr = {
+        'ger': ['Berlin', 'Munich', 'Dortmund'],
+        'usa': ['New-York', 'Las Vegas', 'Vashington'],
+        'ukr': ['Lviv', 'Kiev', 'Stryi'],
+    }
+
+    let country = document.getElementById("country");
+    country.addEventListener('change', compare);
+    country.addEventListener('change', toParagraph);
+
+    let city = document.getElementById("cities");
+    city.addEventListener('change', toParagraph);
 
     function compare(){
-        let countries = document.getElementById("country").value;
-        let city = document.getElementById("cities");
-        let newOption = document.createElement("option");
-        let newOption1 = document.createElement("option");
-        let newOption2 = document.createElement("option");
-        switch(document.getElementById("country").value){
-            
-            case "ger":
-            newOption.value = "ber";
-            newOption.text = "Berlin";
-            city.add(newOption);
-            document.getElementById("1").innerHTML = "Germany, Berlin";
-            break;
-
-            case "usa":
-            newOption1.label;
-            newOption1.text = "New-York";
-            newOption1.label = "New-York"   ;
-            city.add(newOption1);
-            document.getElementById("1").innerHTML = "USA, New-York";
-            break;
-
-            case "ukr":
-            newOption2.value = "ki";
-            newOption2.text = "Kiev";
-            city.add(newOption2);
-            document.getElementById("1").innerHTML = "Ukraine, Kiev";
-            break;
-            default:
-            break;
+        city.innerHTML = "";
+        let selectedCountry = country.value;
+        for(let i = 0; i < cityArr[selectedCountry].length; i++){
+            let option = document.createElement('option');
+            option.innerHTML = cityArr[selectedCountry][i];
+            city.appendChild(option);
         }
     }
-</script>
-
+    let paragraph = document.querySelector("p");
+    function toParagraph(){
+        paragraph.innerHTML = "";
+        paragraph.innerHTML = country.options[country.selectedIndex].text + ', ' + city.options[city.selectedIndex].text;
+    }
+</script> 
 
 
 </body>
