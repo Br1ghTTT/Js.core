@@ -77,34 +77,25 @@
     </script> 
 
 
-    <!--********************************* 4 task (NOT WORKING)*********************************-->
-<!--
-     <select>
-        <option  id = "1" value=>Peter</option>
-        <option  id = "2" value="john" >John</option>
-        <option id = "3">Alise</option>
-        <option id = "4">Alex</option>
-        <option id = "5">Iren</option>
+    <!--********************************* 4 task *********************************-->
+
+     <select id="names">
+        <option>Peter</option>
+        <option>John</option>
+        <option>Alise</option>
+        <option>Alex</option>
+        <option>Iren</option>
     </select>
-    <button id = "but1" >Choose and Delete</button>
+    <button id = "but1">Choose and Delete</button>
     
     <script>
-        
-        function onFirst(){
-            let pit = document.getElementById("1");
-            if(pit && pit) {
-            pit.remove();
-            }
+        function toDelete(){
+            let del = document.getElementById("names");
+            del.remove(del.selectedIndex);
         }
-        function onSecond(){
-            let john = document.getElementById("2");
-            if(john){
-            john.remove();
-            }
-        }
-        document.getElementById("but1").addEventListener("click", onFirst);
-        document.getElementById("but1").addEventListener("dblclick", onSecond);
-    </script>-->
+        but1.addEventListener("click", toDelete)
+    </script>
+    </script>
 
 
     <!--********************************* 5 task *********************************-->
