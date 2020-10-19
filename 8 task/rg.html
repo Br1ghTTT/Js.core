@@ -7,8 +7,8 @@
 </head>
 <body>
     
-<!--*************************************** task 1 *********************************** -->
-    <!-- <script> 
+<!-- *************************************** task 1 *********************************** -->
+     <script> 
         let str = "regexp";
         function toCheck(){
             let regExp = /^[A-Z]/;            
@@ -18,16 +18,16 @@
                 console.log("String's not starts with uppercase character!");
         }
         toCheck();
-    </script> -->
+    </script>
 <!--*************************************** task 2 *********************************** -->
- <!--    <script>
+    <script>
         function checkEmail(email){
             let regExp = /[[^Qa-m0-2]/;
             console.log(regExp.test(email));
         }
     checkEmail("Qmail2@gmail.com");
     </script>
- -->
+ 
 <!--*************************************** task 3 (Not working)*********************************** -->
 
  <script>
@@ -38,16 +38,16 @@
 
 <!--*************************************** task 4 *********************************** -->
 
-<!-- <script>
+<script>
 
-console.log("Java Script!".replace(/(\w+) (\w+)/i, '$2, $1'));  
+console.log("Java Script!".replace(/(\w+)\s(\w+)/i, '$2, $1'));  
   
-</script> -->
+</script> 
 
 <!--*************************************** task 5 *********************************** -->
 <script>
 
-/* function validation(str){
+ function validation(str){
     let check = /\d{4}-\d{4}-\d{4}-\d{4}/;
     if(str.match(check)){
         console.log("Validating is success! Ur card number is: "+ "'" + str.match(/\d+/g)+ "'");
@@ -55,11 +55,11 @@ console.log("Java Script!".replace(/(\w+) (\w+)/i, '$2, $1'));
         console.log("Validating is wrong! Please try again");
     }
 }   
-validation("9999-9999-9999-9999");*/
+validation("9999-9999-9999-9999");
 </script> 
 
 <!--*************************************** task 6 *********************************** -->
-<!-- <script>
+ <script>
 function validation(email){
     let check = /^(\w)+/;
     let check1 = /^_/;
@@ -73,9 +73,22 @@ function validation(email){
         console.log("Smth wrong! Try again!");
     }
 }   
-validation("My_mail@gmail.com"); -->
+validation("My_mail@gmail.com"); 
 </script>
+<!--*************************************** task 7 *********************************** -->
 
+<script>
+
+function checkLogin(data){
+    let reg = /^[a-zA-z]{1}[a-zA-z0-9\.]{1,9}$/;
+    let inputNumb = /[0-9\.]+/g;
+    let res = data.match(inputNumb);
+    let res1 = reg.test(data);
+    console.log(`${data} is ${res1} - ${res}`);
+}
+checkLogin('ee1.1ret3');
+checkLogin('ee1.1ret3');
+</script>
 
 </body>
 </html>
