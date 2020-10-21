@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- ******************************************** 1 task **************************************** -->
+<script>
+    let arr = ["Tom", "Sam", "Ray", "Bob"];
+    let [x, y, , ...z] = arr;
+
+    console.log(x); // "Tom"
+    console.log(y); // "Sam"
+    console.log(z); // [Bob]
+</script>
+
+
+<!-- ******************************************** 2 task **************************************** -->
+<script>
+
+let data = {
+   names: ["Sam", "Tom", "Ray", "Bob"],
+   ages: [20, 24, 22, 26],
+};
+const {names: [ , t, ,], ages: [, s, , ], names: [, , , b], ages: [ , , , f]} = data;
+console.log(t); // "Tom"
+console.log(s); // 24
+console.log(b); // "Bob"
+console.log(f); 
+
+</script>
+
+
+<!-- ******************************************** 3 task  NOT WORKING **************************************** -->
+<!-- <script>
+function mul(obj){
+    Obj.map(()=>(){
+        
+    });
+}
+
+</script> -->
+
+
+
+
+<!-- ******************************************** 4 task **************************************** -->
+<script>
+let server = {
+    data: 0,
+    convertToString: function (callback) {
+       callback(() => {
+          return this.data + "";
+       });
+    }
+ };
+ let client = {
+    server: server,
+    result: "",
+    calc: function (data) {
+       this.server.data = data;
+       this.server.convertToString(this.notification());
+    },
+    notification: function () {
+       return (callback) => {
+          this.result = callback();
+       };
+    }
+ };
+ client.calc(123);
+ console.log(client.result); // "123"
+ console.log(typeof client.result); // "string"
+</script>
+
+<!-- ******************************************** 5 task **************************************** -->
+
+<script>
+
+let keys = [1, 2, 3, 4];
+let values = ["div", "span", "b", "i"];
+
+function mapBuilder(keys,values){
+    const map = new Map();
+    for(let i = 0; i < keys.length; i++){
+    map.set(keys[i] , values[i]);
+    }
+    console.log(map.size); 
+    console.log(map.get(2));
+    
+}
+mapBuilder(keys,values); 
+
+</script>
+
+</body>
+</html>
