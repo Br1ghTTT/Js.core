@@ -10,7 +10,5 @@ http.createServer (function(request,response){
     response.write("<p> System work time: " + os.uptime()+ "</p>");
     response.write("<p> Current work directory: " + path.dirname(__filename) + "</p>");
     response.write("<p> Current work directory: " + path.basename(__filename) + "</p>");
-    console.log(os.cpus());
-    console.log(os.userInfo());
     response.end();
 }).listen(5000);
