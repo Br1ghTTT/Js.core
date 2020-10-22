@@ -34,17 +34,22 @@ console.log(f);
 </script>
 
 
-<!-- ******************************************** 3 task  NOT WORKING **************************************** -->
-<!-- <script>
-function mul(obj){
-    Obj.map(()=>(){
-        
-    });
+<!-- ******************************************** 3 task **************************************** -->
+<script>
+function mul(...rest){
+   let result = 1;
+   let isNumber;
+   for(let i of rest){
+      if(typeof(i) == 'number'){
+         result *= i;
+         isNumber = true;
+      }
+   }
+   return isNumber ? result : 0;
 }
-
-</script> -->
-
-
+console.log(mul(1, "str", 2, 3, true)); // 6
+console.log(mul(null, "str", false, true)); 
+</script>
 
 
 <!-- ******************************************** 4 task **************************************** -->
