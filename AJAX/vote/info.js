@@ -1,1 +1,0 @@
-"Your vote is accepted: " + Date();
