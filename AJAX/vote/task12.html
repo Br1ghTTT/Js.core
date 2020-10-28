@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="but1" onclick="loadData()">Vote</button>
+  
+    <script>
+      function loadData() {
+        const aj = new XMLHttpRequest();
+  
+        aj.open('GET', 'vote', true);  
+  
+        aj.onreadystatechange = function() {
+           if(aj.readyState < 4){
+              document.getElementById("but1").innerHTML = "Loading..."
+          }  
+          if (aj.readyState != 4) return;
+          if (aj.status != 200) {
+
+            alert('Error ' + aj.status + ': ' + aj.statusText);
+          } else {
+           
+            document.getElementById("but1").innerHTML = aj.responseText;
+          }
+        }
+        aj.send();
+      }
+    </script>
+
+</body>
+</html>
